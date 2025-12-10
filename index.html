@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krishi Mithram - Kerala Agricultural Platform</title>
+    <title>Karshika Mithram - Kerala Agricultural Platform</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-green: #27ae60;
@@ -19,7 +19,6 @@
             --gray: #7f8c8d;
             --dark-gray: #34495e;
             --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
 
         * {
@@ -32,225 +31,120 @@
         body {
             background-color: var(--light-bg);
             color: var(--dark-gray);
-            line-height: 1.6;
             font-size: 16px;
+            line-height: 1.6;
         }
 
-        /* Welcome Screen - Interactive Landing Page */
+        /* Welcome Screen */
         #welcomeScreen {
             min-height: 100vh;
-            background: linear-gradient(rgba(39, 174, 96, 0.9), rgba(33, 150, 83, 0.9)), 
-                        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(rgba(39, 174, 96, 0.9), rgba(33, 150, 83, 0.9));
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             padding: 2rem;
             text-align: center;
             color: white;
         }
 
-        .welcome-container {
-            max-width: 900px;
-            width: 100%;
-            animation: fadeIn 1s ease-out;
-        }
-
         .app-logo {
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .app-logo i {
             font-size: 5rem;
             margin-bottom: 1rem;
-            color: white;
-            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+            animation: pulse 2s infinite;
         }
 
         .app-logo h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
+            font-size: 3rem;
             margin-bottom: 0.5rem;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            letter-spacing: 1px;
         }
 
         .app-logo p {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             opacity: 0.9;
-            margin-bottom: 2rem;
         }
 
         .welcome-tagline {
-            font-size: 1.3rem;
-            margin-bottom: 3rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            max-width: 800px;
+            margin: 2rem auto;
+            font-size: 1.2rem;
             line-height: 1.8;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .feature-card {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 1.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s, background 0.3s;
-            cursor: pointer;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.25);
-        }
-
-        .feature-card i {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--secondary-yellow);
-        }
-
-        .feature-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
         }
 
         .get-started-btn {
             background-color: var(--secondary-yellow);
             color: var(--dark-gray);
             border: none;
-            padding: 1.2rem 3rem;
+            padding: 1rem 3rem;
             border-radius: 50px;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             font-weight: 600;
             cursor: pointer;
+            margin-top: 2rem;
             transition: all 0.3s;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            margin-top: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .get-started-btn:hover {
             background-color: white;
             transform: scale(1.05);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
         }
 
-        .language-selector {
-            margin-top: 3rem;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .lang-btn {
-            background: rgba(255, 255, 255, 0.2);
-            border: none;
-            color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: background 0.3s;
-            font-size: 1rem;
-        }
-
-        .lang-btn:hover, .lang-btn.active {
-            background: rgba(255, 255, 255, 0.4);
-        }
-
-        .login-container {
-            display: none;
+        /* Login Screen */
+        #loginScreen {
             min-height: 100vh;
-            background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%);
+            background: var(--light-green);
             padding: 2rem;
-            align-items: center;
+            display: none;
             justify-content: center;
+            align-items: center;
         }
 
         .login-box {
-            background-color: var(--white);
+            background: white;
             border-radius: 20px;
-            box-shadow: var(--shadow);
-            width: 100%;
+            padding: 2rem;
             max-width: 500px;
-            padding: 2.5rem;
-            animation: slideUp 0.5s ease-out;
-        }
-
-        .login-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .login-header h2 {
-            color: var(--primary-green);
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .login-header p {
-            color: var(--gray);
-            font-size: 1.1rem;
+            width: 100%;
+            box-shadow: var(--shadow);
         }
 
         .user-type-selector {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
-            margin-bottom: 2rem;
+            margin: 2rem 0;
         }
 
         .user-type-btn {
             padding: 1.5rem;
-            border: 2px solid #e0e0e0;
-            border-radius: 15px;
-            background-color: #f9f9f9;
-            cursor: pointer;
+            border: 2px solid #ddd;
+            border-radius: 10px;
             text-align: center;
+            cursor: pointer;
             transition: all 0.3s;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 0.8rem;
-        }
-
-        .user-type-btn:hover {
-            border-color: var(--primary-green);
-            background-color: rgba(39, 174, 96, 0.05);
-            transform: translateY(-5px);
         }
 
         .user-type-btn.active {
             border-color: var(--primary-green);
             background-color: rgba(39, 174, 96, 0.1);
-            box-shadow: var(--shadow-light);
         }
 
         .user-type-btn i {
             font-size: 2.5rem;
+            margin-bottom: 0.5rem;
             color: var(--primary-green);
         }
 
-        .user-type-btn div {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--dark-gray);
+        .form-section {
+            display: none;
+        }
+
+        .form-section.active {
+            display: block;
         }
 
         .form-group {
@@ -261,68 +155,32 @@
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 600;
-            color: var(--dark-gray);
-            font-size: 1.1rem;
         }
 
-        .form-group input, .form-group select, .form-group textarea {
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
             width: 100%;
-            padding: 1rem;
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
-            font-size: 1.1rem;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary-green);
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
         }
 
         .btn {
             background-color: var(--primary-green);
             color: white;
             border: none;
-            padding: 1.2rem;
-            border-radius: 10px;
-            font-size: 1.2rem;
+            padding: 1rem;
+            border-radius: 5px;
+            font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
-            transition: background-color 0.3s;
             width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.8rem;
+            margin-top: 1rem;
         }
 
-        .btn:hover {
-            background-color: var(--dark-green);
-        }
-
-        .btn-secondary {
-            background-color: #f0f0f0;
-            color: var(--dark-gray);
-        }
-
-        .btn-secondary:hover {
-            background-color: #e0e0e0;
-        }
-
-        .back-btn {
-            background: none;
-            border: none;
-            color: var(--primary-green);
-            font-size: 1rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-            padding: 0.5rem 0;
-        }
-
-        /* Main App Styles */
+        /* Main App */
         #appContainer {
             display: none;
         }
@@ -330,108 +188,55 @@
         header {
             background: linear-gradient(to right, var(--dark-green), var(--primary-green));
             color: white;
-            padding: 1.2rem 2rem;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: var(--shadow);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
         }
 
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 1.2rem;
-        }
-
-        .logo {
-            font-size: 2.8rem;
-        }
-
-        .logo-text h1 {
-            font-size: 1.8rem;
-            margin-bottom: 0.2rem;
-        }
-
-        .logo-text p {
-            font-size: 0.9rem;
-            opacity: 0.9;
+            gap: 1rem;
         }
 
         .user-info {
             display: flex;
             align-items: center;
-            gap: 1.2rem;
+            gap: 1rem;
         }
 
         .badge {
             background-color: var(--secondary-yellow);
             color: var(--dark-green);
-            padding: 0.4rem 1rem;
+            padding: 0.3rem 0.8rem;
             border-radius: 20px;
             font-weight: 600;
-            font-size: 1rem;
         }
 
-        .badge.farmer {
-            background-color: var(--light-green);
-            color: white;
-        }
-
-        .badge.business {
-            background-color: #e67e22;
-            color: white;
-        }
-
-        .badge.citizen {
-            background-color: var(--info-blue);
-            color: white;
-        }
-
-        .badge.official {
-            background-color: #9b59b6;
-            color: white;
-        }
-
-        .profile-btn {
-            background: rgba(255, 255, 255, 0.2);
-            border: none;
-            color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 10px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            font-size: 1rem;
-        }
+        .badge.farmer { background-color: var(--light-green); color: white; }
+        .badge.business { background-color: #e67e22; color: white; }
+        .badge.citizen { background-color: var(--info-blue); color: white; }
+        .badge.official { background-color: #9b59b6; color: white; }
 
         nav {
-            background-color: var(--white);
-            padding: 0.8rem 2rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            background: white;
+            padding: 1rem 2rem;
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             overflow-x: auto;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         .nav-item {
             color: var(--gray);
             text-decoration: none;
-            font-weight: 500;
-            padding: 0.8rem 0;
-            border-bottom: 4px solid transparent;
-            transition: all 0.3s;
+            padding: 0.5rem 0;
+            border-bottom: 3px solid transparent;
             white-space: nowrap;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
         }
 
-        .nav-item:hover, .nav-item.active {
+        .nav-item.active {
             color: var(--primary-green);
             border-bottom-color: var(--primary-green);
         }
@@ -442,55 +247,44 @@
             margin: 0 auto;
         }
 
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
         .dashboard {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 1.5rem;
+            margin-top: 2rem;
         }
 
         .card {
-            background-color: var(--white);
-            border-radius: 15px;
-            padding: 1.8rem;
-            box-shadow: var(--shadow-light);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
             box-shadow: var(--shadow);
         }
 
         .card h3 {
             color: var(--primary-green);
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
             display: flex;
             align-items: center;
-            gap: 1rem;
-            font-size: 1.4rem;
-        }
-
-        .card-icon {
-            background-color: rgba(39, 174, 96, 0.1);
-            color: var(--primary-green);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
+            gap: 0.5rem;
         }
 
         .alert {
-            padding: 1.2rem;
-            border-radius: 10px;
-            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
             display: flex;
             align-items: center;
-            gap: 1.2rem;
-            font-size: 1.1rem;
+            gap: 1rem;
         }
 
         .alert.warning {
@@ -503,1093 +297,671 @@
             border-left: 5px solid var(--info-blue);
         }
 
-        .alert.success {
-            background-color: rgba(46, 204, 113, 0.1);
-            border-left: 5px solid var(--light-green);
-        }
-
-        .section {
-            display: none;
-            animation: fadeIn 0.5s ease-out;
-        }
-
-        .section.active {
-            display: block;
-        }
-
-        .section h2 {
-            color: var(--dark-green);
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-            border-bottom: 3px solid var(--light-green);
-            padding-bottom: 0.5rem;
-        }
-
-        /* Chatbot Styles */
+        /* Chatbot */
         .chatbot-container {
             position: fixed;
             bottom: 2rem;
             right: 2rem;
-            z-index: 1000;
         }
 
         .chatbot-btn {
-            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            background: var(--info-blue);
             color: white;
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             cursor: pointer;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
-        }
-
-        .chatbot-btn:hover {
-            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         .chatbot-window {
             position: absolute;
-            bottom: 85px;
+            bottom: 70px;
             right: 0;
-            width: 380px;
-            height: 550px;
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            width: 350px;
+            height: 500px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             display: none;
             flex-direction: column;
-            overflow: hidden;
         }
 
         .chatbot-header {
-            background: linear-gradient(to right, var(--primary-green), var(--dark-green));
+            background: var(--primary-green);
             color: white;
-            padding: 1.2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding: 1rem;
+            border-radius: 10px 10px 0 0;
         }
 
         .chatbot-messages {
             flex: 1;
-            padding: 1.2rem;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .message {
-            max-width: 85%;
             padding: 1rem;
-            border-radius: 15px;
-            font-size: 1.1rem;
-        }
-
-        .message.user {
-            align-self: flex-end;
-            background-color: #e8f5e9;
-            border-bottom-right-radius: 5px;
-        }
-
-        .message.bot {
-            align-self: flex-start;
-            background-color: #f5f5f5;
-            border-bottom-left-radius: 5px;
+            overflow-y: auto;
         }
 
         .chatbot-input {
-            padding: 1.2rem;
-            border-top: 1px solid #eee;
-            display: flex;
-            gap: 0.8rem;
-        }
-
-        .chatbot-input input {
-            flex: 1;
             padding: 1rem;
-            border: 2px solid #e0e0e0;
+            border-top: 1px solid #ddd;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .message {
+            padding: 0.8rem;
             border-radius: 10px;
-            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            max-width: 80%;
         }
 
-        .chatbot-input button {
-            background-color: var(--primary-green);
-            color: white;
-            border: none;
-            border-radius: 10px;
-            padding: 0 1.5rem;
-            cursor: pointer;
-            font-size: 1.2rem;
+        .message.user {
+            background: #e3f2fd;
+            margin-left: auto;
         }
 
-        /* Form Section Styles */
-        .form-section {
-            display: none;
+        .message.bot {
+            background: #f1f1f1;
         }
 
-        .form-section.active {
-            display: block;
-        }
-
-        /* Community Post Styles */
+        /* Community Posts */
         .post {
-            background-color: var(--white);
-            border-radius: 15px;
-            padding: 1.8rem;
-            margin-bottom: 1.8rem;
-            box-shadow: var(--shadow-light);
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
         }
 
         .post-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 1.2rem;
-        }
-
-        .post-author {
-            display: flex;
-            align-items: center;
-            gap: 1.2rem;
-        }
-
-        .post-content {
-            margin-bottom: 1.2rem;
-            font-size: 1.1rem;
-            line-height: 1.7;
-        }
-
-        .post-actions {
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        .action-btn {
-            background: none;
-            border: none;
-            color: var(--gray);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            font-size: 1rem;
-            padding: 0.5rem;
-            border-radius: 5px;
-            transition: all 0.3s;
-        }
-
-        .action-btn:hover {
-            color: var(--primary-green);
-            background-color: rgba(39, 174, 96, 0.1);
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            .features-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .app-logo h1 {
-                font-size: 2.8rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .dashboard {
-                grid-template-columns: 1fr;
-            }
-            
-            nav {
-                padding: 0.8rem 1rem;
-                gap: 1rem;
-            }
-            
-            .container {
-                padding: 1.5rem;
-            }
-            
-            .chatbot-window {
-                width: 320px;
-                right: -50px;
-            }
-            
-            .user-type-selector {
-                grid-template-columns: 1fr;
-            }
-            
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .app-logo h1 {
-                font-size: 2.5rem;
-            }
-            
-            .welcome-tagline {
-                font-size: 1.2rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .app-logo h1 {
-                font-size: 2.2rem;
-            }
-            
-            .get-started-btn {
-                padding: 1rem 2rem;
-                font-size: 1.2rem;
-            }
-            
-            .login-box {
-                padding: 1.8rem;
-            }
-            
-            header {
-                padding: 1rem;
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .user-info {
-                width: 100%;
-                justify-content: center;
-            }
+            margin-bottom: 1rem;
         }
 
         /* Animations */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
 
-        @keyframes slideUp {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        .pulse {
-            animation: pulse 2s infinite;
-        }
-
-        /* Scrollbar Styling */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--light-green);
-            border-radius: 10px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--primary-green);
+        /* Responsive */
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+            .user-type-selector {
+                grid-template-columns: 1fr;
+            }
+            nav {
+                gap: 1rem;
+                padding: 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Welcome Screen - Interactive Landing Page -->
+    <!-- Welcome Screen -->
     <div id="welcomeScreen">
-        <div class="welcome-container">
-            <div class="app-logo">
-                <i class="fas fa-hands-helping pulse"></i>
-                <h1>Krishi Mithram</h1>
-                <p>കൃഷി മിത്രം - കേരളത്തിന്റെ കാർഷിക വികസന പ്ലാറ്റ്ഫോം</p>
-            </div>
-            
-            <div class="welcome-tagline">
-                Connecting Farmers, Businesses, Citizens & Government Departments of Kerala. 
-                A unified platform for agricultural growth, market access, and disaster management.
-            </div>
-            
-            <div class="features-grid">
-                <div class="feature-card" onclick="showFeatureInfo('panchayat')">
-                    <i class="fas fa-map-marked-alt"></i>
-                    <h3>Panchayat Mapping</h3>
-                    <p>Interactive maps with soil, water, and crop data</p>
-                </div>
-                
-                <div class="feature-card" onclick="showFeatureInfo('crop')">
-                    <i class="fas fa-seedling"></i>
-                    <h3>Crop Recommendations</h3>
-                    <p>AI-powered suggestions based on climate & market</p>
-                </div>
-                
-                <div class="feature-card" onclick="showFeatureInfo('market')">
-                    <i class="fas fa-shopping-cart"></i>
-                    <h3>Business Platform</h3>
-                    <p>Buy/sell produce, fertilizers, and lease land</p>
-                </div>
-                
-                <div class="feature-card" onclick="showFeatureInfo('disaster')">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Disaster Alerts</h3>
-                    <p>Real-time alerts and emergency services</p>
-                </div>
-                
-                <div class="feature-card" onclick="showFeatureInfo('community')">
-                    <i class="fas fa-users"></i>
-                    <h3>Community Support</h3>
-                    <p>Connect with farmers and agricultural officers</p>
-                </div>
-                
-                <div class="feature-card" onclick="showFeatureInfo('ai')">
-                    <i class="fas fa-robot"></i>
-                    <h3>AI Assistant</h3>
-                    <p>Voice-enabled chatbot with photo support</p>
-                </div>
-            </div>
-            
-            <button class="get-started-btn" onclick="showLoginScreen()">
-                <i class="fas fa-play-circle"></i>
-                Get Started Now
-            </button>
-            
-            <div class="language-selector">
-                <button class="lang-btn active" onclick="changeLanguage('en')">English</button>
-                <button class="lang-btn" onclick="changeLanguage('ml')">മലയാളം</button>
-                <button class="lang-btn" onclick="changeLanguage('hi')">हिन्दी</button>
-            </div>
+        <div class="app-logo">
+            <i class="fas fa-hands-helping"></i>
+            <h1>Karshika Mithram</h1>
+            <p>കൃഷി മിത്രം - Kerala's Agricultural Platform</p>
         </div>
+        <div class="welcome-tagline">
+            Connecting Farmers, Businesses, Government Departments and Citizens of Kerala.<br>
+            A unified platform for agricultural growth, market access, and disaster management.
+        </div>
+        <button class="get-started-btn" onclick="showLoginScreen()">
+            <i class="fas fa-play-circle"></i> Get Started
+        </button>
     </div>
-    
+
     <!-- Login Screen -->
-    <div id="loginScreen" class="login-container">
+    <div id="loginScreen">
         <div class="login-box">
-            <button class="back-btn" onclick="showWelcomeScreen()">
-                <i class="fas fa-arrow-left"></i> Back to Home
-            </button>
-            
-            <div class="login-header">
-                <h2>Krishi Mithram</h2>
-                <p>Login to access agricultural services</p>
-            </div>
+            <h2 style="color: var(--primary-green); text-align: center; margin-bottom: 2rem;">Karshika Mithram</h2>
             
             <div class="user-type-selector">
                 <div class="user-type-btn" onclick="selectUserType('farmer')">
                     <i class="fas fa-tractor"></i>
                     <div>Farmer</div>
-                    <small>കൃഷിക്കാരൻ</small>
                 </div>
                 <div class="user-type-btn" onclick="selectUserType('business')">
                     <i class="fas fa-briefcase"></i>
                     <div>Business</div>
-                    <small>വ്യവസായം</small>
                 </div>
                 <div class="user-type-btn" onclick="selectUserType('citizen')">
                     <i class="fas fa-user"></i>
                     <div>Citizen</div>
-                    <small>പൗരൻ</small>
                 </div>
                 <div class="user-type-btn" onclick="selectUserType('official')">
                     <i class="fas fa-landmark"></i>
                     <div>Government Official</div>
-                    <small>സർക്കാർ ഉദ്യോഗസ്ഥൻ</small>
                 </div>
             </div>
-            
+
+            <!-- Farmer Registration Form -->
             <div id="farmerForm" class="form-section">
-                <h3 style="color: var(--primary-green); margin-bottom: 1.5rem;">Farmer Login</h3>
+                <h3>Farmer Registration</h3>
                 <div class="form-group">
-                    <label><i class="fas fa-id-card"></i> Kisan ID / Aadhar ID</label>
-                    <input type="text" id="kisanId" placeholder="Enter your Kisan ID or Aadhar ID">
+                    <label>Full Name</label>
+                    <input type="text" id="farmerName" placeholder="Enter your full name">
                 </div>
                 <div class="form-group">
-                    <label><i class="fas fa-lock"></i> Password</label>
-                    <input type="password" id="farmerPassword" placeholder="Enter your password">
-                </div>
-                <button class="btn" onclick="login('farmer')">
-                    <i class="fas fa-sign-in-alt"></i>
-                    Login as Farmer
-                </button>
-                <p style="text-align: center; margin-top: 1rem; color: var(--gray);">Demo: Use any ID and password</p>
-            </div>
-            
-            <div id="businessForm" class="form-section">
-                <h3 style="color: var(--primary-green); margin-bottom: 1.5rem;">Business Login</h3>
-                <div class="form-group">
-                    <label><i class="fas fa-file-contract"></i> Business License ID</label>
-                    <input type="text" id="businessId" placeholder="Enter Business License ID">
+                    <label>Kisan ID / Aadhar ID</label>
+                    <input type="text" id="farmerId" placeholder="Enter Kisan ID or Aadhar ID">
                 </div>
                 <div class="form-group">
-                    <label><i class="fas fa-lock"></i> Password</label>
-                    <input type="password" id="businessPassword" placeholder="Enter your password">
-                </div>
-                <button class="btn" onclick="login('business')">
-                    <i class="fas fa-sign-in-alt"></i>
-                    Login as Business
-                </button>
-            </div>
-            
-            <div id="citizenForm" class="form-section">
-                <h3 style="color: var(--primary-green); margin-bottom: 1.5rem;">Citizen Login</h3>
-                <div class="form-group">
-                    <label><i class="fas fa-envelope"></i> Email Address</label>
-                    <input type="email" id="citizenEmail" placeholder="Enter your email address">
+                    <label>Phone Number</label>
+                    <input type="tel" id="farmerPhone" placeholder="Enter phone number">
                 </div>
                 <div class="form-group">
-                    <label><i class="fas fa-lock"></i> Password</label>
-                    <input type="password" id="citizenPassword" placeholder="Enter your password">
-                </div>
-                <button class="btn" onclick="login('citizen')">
-                    <i class="fas fa-sign-in-alt"></i>
-                    Login as Citizen
-                </button>
-            </div>
-            
-            <div id="officialForm" class="form-section">
-                <h3 style="color: var(--primary-green); margin-bottom: 1.5rem;">Government Official Login</h3>
-                <div class="form-group">
-                    <label><i class="fas fa-id-badge"></i> Government Email / ID</label>
-                    <input type="text" id="officialId" placeholder="Enter Government Email or ID">
-                </div>
-                <div class="form-group">
-                    <label><i class="fas fa-user-tag"></i> Role</label>
-                    <select id="officialRole">
-                        <option value="agri_officer">Agricultural Officer</option>
-                        <option value="dept_head">Department Head</option>
-                        <option value="panchayat_member">Panchayat Member</option>
-                        <option value="field_officer">Field Officer</option>
+                    <label>District</label>
+                    <select id="farmerDistrict">
+                        <option value="">Select District</option>
+                        <option>Alappuzha</option>
+                        <option>Kottayam</option>
+                        <option>Idukki</option>
+                        <option>Ernakulam</option>
+                        <option>Thrissur</option>
+                        <option>Palakkad</option>
+                        <option>Wayanad</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label><i class="fas fa-lock"></i> Password</label>
-                    <input type="password" id="officialPassword" placeholder="Enter your password">
+                    <label>Panchayat</label>
+                    <input type="text" id="farmerPanchayat" placeholder="Enter Panchayat name">
                 </div>
-                <button class="btn" onclick="login('official')">
-                    <i class="fas fa-sign-in-alt"></i>
-                    Login as Official
-                </button>
+                <div class="form-group">
+                    <label>Land Survey Number</label>
+                    <input type="text" id="surveyNumber" placeholder="Enter survey number">
+                </div>
+                <div class="form-group">
+                    <label>Land Area (acres)</label>
+                    <input type="number" id="landArea" placeholder="Enter land area">
+                </div>
+                <div class="form-group">
+                    <label>Crops Currently Farming</label>
+                    <textarea id="currentCrops" placeholder="List your crops (e.g., Rice, Coconut, Banana)"></textarea>
+                </div>
+                <button class="btn" onclick="registerFarmer()">Register as Farmer</button>
+            </div>
+
+            <!-- Business Registration Form -->
+            <div id="businessForm" class="form-section">
+                <h3>Business Registration</h3>
+                <div class="form-group">
+                    <label>Business Name</label>
+                    <input type="text" id="businessName" placeholder="Enter business name">
+                </div>
+                <div class="form-group">
+                    <label>Business License ID</label>
+                    <input type="text" id="businessLicense" placeholder="Enter license number">
+                </div>
+                <div class="form-group">
+                    <label>Business Type</label>
+                    <select id="businessType">
+                        <option value="">Select Type</option>
+                        <option>Fertilizer Seller</option>
+                        <option>Produce Buyer</option>
+                        <option>Equipment Rental</option>
+                        <option>Land Leasing</option>
+                        <option>Agricultural Services</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Purpose on Platform</label>
+                    <select id="businessPurpose">
+                        <option value="">Select Purpose</option>
+                        <option>Sell Products (Fertilizers, Equipment)</option>
+                        <option>Buy Agricultural Produce</option>
+                        <option>Lease Land</option>
+                        <option>Both Buy and Sell</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="businessPhone" placeholder="Enter phone number">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="businessEmail" placeholder="Enter email">
+                </div>
+                <button class="btn" onclick="registerBusiness()">Register as Business</button>
+            </div>
+
+            <!-- Citizen Registration Form -->
+            <div id="citizenForm" class="form-section">
+                <h3>Citizen Registration</h3>
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="citizenName" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="citizenEmail" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="citizenPhone" placeholder="Enter phone number">
+                </div>
+                <div class="form-group">
+                    <label>District</label>
+                    <select id="citizenDistrict">
+                        <option value="">Select District</option>
+                        <option>Alappuzha</option>
+                        <option>Kottayam</option>
+                        <option>Idukki</option>
+                        <option>Ernakulam</option>
+                        <option>Thrissur</option>
+                        <option>Palakkad</option>
+                        <option>Wayanad</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Interest in Agriculture</label>
+                    <select id="citizenInterest">
+                        <option value="">Select Interest</option>
+                        <option>Home Gardening</option>
+                        <option>Organic Farming</option>
+                        <option>Agricultural News</option>
+                        <option>Market Prices</option>
+                        <option>All of the above</option>
+                    </select>
+                </div>
+                <button class="btn" onclick="registerCitizen()">Register as Citizen</button>
+            </div>
+
+            <!-- Government Official Registration Form -->
+            <div id="officialForm" class="form-section">
+                <h3>Government Official Registration</h3>
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="officialName" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label>Government Email / ID</label>
+                    <input type="text" id="officialId" placeholder="Enter government email or ID">
+                </div>
+                <div class="form-group">
+                    <label>Department</label>
+                    <select id="officialDept">
+                        <option value="">Select Department</option>
+                        <option>Agriculture Department</option>
+                        <option>Panchayat Office</option>
+                        <option>Krishi Vigyan Kendra</option>
+                        <option>Disaster Management</option>
+                        <option>Horticulture Department</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Designation</label>
+                    <select id="officialDesignation">
+                        <option value="">Select Designation</option>
+                        <option>Agricultural Officer</option>
+                        <option>Department Head</option>
+                        <option>Panchayat Secretary</option>
+                        <option>Field Officer</option>
+                        <option>Research Scientist</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Jurisdiction District</label>
+                    <select id="officialDistrict">
+                        <option value="">Select District</option>
+                        <option>Alappuzha</option>
+                        <option>Kottayam</option>
+                        <option>Idukki</option>
+                        <option>Ernakulam</option>
+                        <option>Thrissur</option>
+                        <option>Palakkad</option>
+                        <option>Wayanad</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="officialPhone" placeholder="Enter phone number">
+                </div>
+                <button class="btn" onclick="registerOfficial()">Register as Official</button>
             </div>
         </div>
     </div>
-    
-    <!-- Main App -->
-    <div id="appContainer" style="display: none;">
+
+    <!-- Main Application -->
+    <div id="appContainer">
         <!-- Header -->
         <header>
             <div class="logo-container">
-                <div class="logo">
-                    <i class="fas fa-hands-helping"></i>
-                </div>
-                <div class="logo-text">
-                    <h1>Krishi Mithram</h1>
-                    <p>കൃഷി മിത്രം - Kerala's Agricultural Platform</p>
+                <i class="fas fa-hands-helping" style="font-size: 2rem;"></i>
+                <div>
+                    <h2 style="margin: 0;">Karshika Mithram</h2>
+                    <small style="opacity: 0.8;">Kerala Agricultural Platform</small>
                 </div>
             </div>
-            
             <div class="user-info">
                 <div id="userBadge" class="badge">User</div>
-                <button class="profile-btn" onclick="showProfile()">
-                    <i class="fas fa-user-circle"></i>
-                    <span id="userName">User Name</span>
-                </button>
-                <button class="profile-btn" onclick="logout()">
+                <div id="userName" style="font-weight: 600;"></div>
+                <button onclick="logout()" style="background: none; border: none; color: white; cursor: pointer;">
                     <i class="fas fa-sign-out-alt"></i>
-                    Logout
                 </button>
             </div>
         </header>
-        
+
         <!-- Navigation -->
         <nav>
             <a href="#" class="nav-item active" onclick="showSection('dashboard')">
                 <i class="fas fa-home"></i> Dashboard
             </a>
-            <a href="#" class="nav-item" onclick="showSection('panchayatMap')">
+            <a href="#" class="nav-item" onclick="showSection('panchayat')">
                 <i class="fas fa-map-marked-alt"></i> Panchayat Mapping
             </a>
-            <a href="#" class="nav-item" onclick="showSection('cropRecommendation')">
+            <a href="#" class="nav-item" onclick="showSection('crop')">
                 <i class="fas fa-seedling"></i> Crop Recommendations
             </a>
-            <a href="#" class="nav-item" onclick="showSection('disasterAlerts')">
+            <a href="#" class="nav-item" onclick="showSection('disaster')">
                 <i class="fas fa-exclamation-triangle"></i> Disaster Alerts
             </a>
             <a href="#" class="nav-item" onclick="showSection('community')">
                 <i class="fas fa-users"></i> Community
             </a>
-            <a href="#" class="nav-item" onclick="showSection('business')">
-                <i class="fas fa-shopping-cart"></i> Business Platform
+            <a href="#" class="nav-item" onclick="showSection('marketplace')">
+                <i class="fas fa-shopping-cart"></i> Marketplace
             </a>
             <a href="#" class="nav-item" onclick="showSection('emergency')">
                 <i class="fas fa-phone-alt"></i> Emergency
             </a>
+            <a href="#" class="nav-item" onclick="showSection('profile')">
+                <i class="fas fa-user"></i> Profile
+            </a>
         </nav>
-        
+
         <!-- Main Content -->
         <div class="container">
             <!-- Dashboard Section -->
-            <div id="dashboardSection" class="section active">
-                <h2>Welcome to Krishi Mithram</h2>
-                <div class="alert success">
+            <div id="dashboard" class="section active">
+                <h2>Dashboard</h2>
+                <div class="alert info">
                     <i class="fas fa-info-circle"></i>
-                    <div>Welcome to Krishi Mithram. Update your profile data every 6 months to keep information current.</div>
+                    <div>Welcome to Karshika Mithram! Update your profile every 6 months for accurate recommendations.</div>
                 </div>
-                
                 <div class="dashboard">
                     <div class="card">
-                        <h3><div class="card-icon"><i class="fas fa-map-marked-alt"></i></div> Panchayat Mapping</h3>
-                        <p>View geographical maps and agricultural data for your panchayat. Check soil type, water availability, and suitable crops.</p>
-                        <button class="btn" style="margin-top: 1rem;" onclick="showSection('panchayatMap')">Explore Maps</button>
+                        <h3><i class="fas fa-map-marked-alt"></i> Panchayat Mapping</h3>
+                        <p>View soil data, water availability, and suitable crops for your area.</p>
+                        <button class="btn" onclick="showSection('panchayat')" style="margin-top: 1rem;">View Maps</button>
                     </div>
-                    
                     <div class="card">
-                        <h3><div class="card-icon"><i class="fas fa-cloud-sun-rain"></i></div> Weather & Forecast</h3>
-                        <p>Real-time weather updates, rainfall forecast, and climate-based crop suggestions for your region.</p>
-                        <div style="margin-top: 1rem;">
-                            <p><strong>Today:</strong> Partly cloudy, 28°C</p>
-                            <p><strong>Rainfall:</strong> 70% chance, 15mm expected</p>
-                        </div>
+                        <h3><i class="fas fa-cloud-sun-rain"></i> Weather Forecast</h3>
+                        <p>Today: Partly Cloudy, 28°C<br>Rainfall: 70% chance, 15mm expected</p>
                     </div>
-                    
                     <div class="card">
-                        <h3><div class="card-icon"><i class="fas fa-robot"></i></div> AI Crop Advisor</h3>
-                        <p>Get personalized crop recommendations based on soil, climate, and market demand. Upload photos for disease diagnosis.</p>
-                        <button class="btn" style="margin-top: 1rem;" onclick="openChatbot()">Ask AI Assistant</button>
+                        <h3><i class="fas fa-robot"></i> AI Assistant</h3>
+                        <p>Get crop advice, pest control tips, and market insights.</p>
+                        <button class="btn" onclick="toggleChatbot()" style="margin-top: 1rem;">Open Chatbot</button>
                     </div>
-                    
                     <div class="card">
-                        <h3><div class="card-icon"><i class="fas fa-bullhorn"></i></div> Government Alerts</h3>
-                        <p>Official announcements from Agricultural Department and Panchayats.</p>
-                        <div style="margin-top: 1rem;">
-                            <p><strong>New:</strong> Subsidy for organic fertilizers</p>
-                            <p><strong>Alert:</strong> Rainfall warning for Thrissur</p>
-                        </div>
+                        <h3><i class="fas fa-bullhorn"></i> Government Alerts</h3>
+                        <p>• Subsidy for organic fertilizers<br>• Rainfall warning for Thrissur</p>
                     </div>
-                    
                     <div class="card">
-                        <h3><div class="card-icon"><i class="fas fa-chart-line"></i></div> Market Prices</h3>
-                        <p>Current market rates for major crops in Kerala.</p>
-                        <div style="margin-top: 1rem;">
-                            <p><strong>Rice:</strong> ₹28/kg</p>
-                            <p><strong>Coconut:</strong> ₹35/kg</p>
-                            <p><strong>Banana:</strong> ₹22/kg</p>
-                        </div>
+                        <h3><i class="fas fa-chart-line"></i> Market Prices</h3>
+                        <p>Rice: ₹28/kg<br>Coconut: ₹35/kg<br>Banana: ₹22/kg</p>
                     </div>
-                    
                     <div class="card">
-                        <h3><div class="card-icon"><i class="fas fa-calendar-alt"></i></div> Update Reminder</h3>
-                        <p>Your profile data was last updated on <span id="lastUpdate">Not updated yet</span></p>
-                        <p style="margin-top: 1rem;">Update your land, crop, and business details every 6 months.</p>
-                        <button class="btn" style="margin-top: 1rem;" onclick="showProfile()">Update Profile Now</button>
+                        <h3><i class="fas fa-calendar-alt"></i> Update Reminder</h3>
+                        <p>Profile last updated: <span id="lastUpdate">Not yet</span></p>
+                        <button class="btn" onclick="showSection('profile')" style="margin-top: 1rem;">Update Now</button>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Panchayat Mapping Section -->
-            <div id="panchayatMapSection" class="section">
+            <div id="panchayat" class="section">
                 <h2>Panchayat Mapping</h2>
                 <div class="alert info">
                     <i class="fas fa-info-circle"></i>
-                    <div>Panchayats can update geographical and agricultural data. Citizens can view crop suitability and soil information.</div>
+                    <div>Panchayats can update agricultural data. Citizens can view crop suitability and soil information.</div>
                 </div>
-                
-                <div class="form-group" style="margin-bottom: 2rem;">
-                    <label><i class="fas fa-map-pin"></i> Select Panchayat</label>
+                <div class="form-group">
+                    <label>Select Panchayat</label>
                     <select id="panchayatSelect" onchange="loadPanchayatData()">
-                        <option value="alappuzha">Alappuzha Municipality</option>
                         <option value="kuttanad">Kuttanad Panchayat</option>
                         <option value="wayanad">Wayanad Tribal Panchayat</option>
                         <option value="palakkad">Palakkad Grama Panchayat</option>
                     </select>
                 </div>
-                
                 <div class="card">
-                    <h3><i class="fas fa-map"></i> Panchayat Agricultural Data</h3>
+                    <h3>Agricultural Data</h3>
                     <div id="panchayatData">
                         <p><strong>Soil Type:</strong> Alluvial soil</p>
-                        <p><strong>Water Availability:</strong> High (Riverine area)</p>
-                        <p><strong>Primary Crops:</strong> Rice, Coconut, Banana</p>
+                        <p><strong>Water Availability:</strong> High</p>
+                        <p><strong>Suitable Crops:</strong> Rice, Coconut, Banana</p>
                         <p><strong>Fertility Level:</strong> High</p>
-                        <p><strong>Rainfall Pattern:</strong> 3000mm annually</p>
                     </div>
-                    
-                    <div style="margin-top: 2rem;">
-                        <h4>Map Visualization</h4>
-                        <div style="background-color: #e8f5e9; height: 200px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-top: 1rem;">
-                            <i class="fas fa-map" style="font-size: 3rem; color: var(--primary-green);"></i>
-                            <div style="margin-left: 1rem;">
-                                <p>Interactive map would appear here</p>
-                                <p><small>Showing: Crop zones, Water sources, Soil types</small></p>
-                            </div>
-                        </div>
+                    <div style="margin-top: 2rem; padding: 1rem; background: #e8f5e9; border-radius: 5px;">
+                        <p><i class="fas fa-map"></i> Interactive map showing crop zones and water sources</p>
                     </div>
-                    
-                    <!-- Government Officials can edit this data -->
-                    <div id="editPanchayatData" style="display: none; margin-top: 2rem;">
-                        <h4>Update Panchayat Data (Officials Only)</h4>
+                    <div id="officialEditSection" style="display: none; margin-top: 2rem;">
+                        <h4>Update Data (Officials Only)</h4>
                         <div class="form-group">
                             <label>Soil Type</label>
-                            <input type="text" id="soilType" value="Alluvial soil">
+                            <input type="text" id="updateSoil">
                         </div>
-                        <div class="form-group">
-                            <label>Water Availability</label>
-                            <select id="waterAvailability">
-                                <option>High</option>
-                                <option>Medium</option>
-                                <option>Low</option>
-                            </select>
-                        </div>
-                        <button class="btn">Update Panchayat Data</button>
+                        <button class="btn" onclick="updatePanchayatData()">Update</button>
                     </div>
                 </div>
             </div>
-            
-            <!-- Crop Recommendation Section -->
-            <div id="cropRecommendationSection" class="section">
+
+            <!-- Crop Recommendations Section -->
+            <div id="crop" class="section">
                 <h2>Crop Recommendations</h2>
-                
-                <div class="card" style="margin-bottom: 2rem;">
-                    <h3><i class="fas fa-cloud-sun-rain"></i> Climate-Based Recommendations</h3>
-                    <p><strong>Current Season:</strong> Monsoon (June-September)</p>
-                    <p><strong>Recommended Crops:</strong> Rice, Tapioca, Banana</p>
-                    <p><strong>Market Demand:</strong> High for Organic Vegetables</p>
-                    <p><strong>Government Suggestion:</strong> Focus on paddy cultivation with new HYV seeds</p>
-                </div>
-                
                 <div class="card">
-                    <h3><i class="fas fa-robot"></i> AI-Powered Crop Advisor</h3>
+                    <h3><i class="fas fa-cloud-sun-rain"></i> Climate-Based Advice</h3>
+                    <p><strong>Current Season:</strong> Monsoon</p>
+                    <p><strong>Recommended:</strong> Rice, Tapioca, Banana</p>
+                    <p><strong>Market Demand:</strong> High for organic vegetables</p>
+                </div>
+                <div class="card" style="margin-top: 2rem;">
+                    <h3><i class="fas fa-robot"></i> AI Recommendation</h3>
                     <div class="form-group">
-                        <label>Select Your Land Type</label>
+                        <label>Select Land Type</label>
                         <select id="landType">
                             <option>Wetland</option>
                             <option>Dryland</option>
                             <option>Garden Land</option>
-                            <option>Hilly Area</option>
                         </select>
                     </div>
-                    
-                    <div class="form-group">
-                        <label>Soil Type</label>
-                        <select id="soilTypeSelect">
-                            <option>Alluvial</option>
-                            <option>Laterite</option>
-                            <option>Red Soil</option>
-                            <option>Black Soil</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Water Availability</label>
-                        <select id="waterAvail">
-                            <option>High (River/Canal)</option>
-                            <option>Medium (Well/Pond)</option>
-                            <option>Low (Rainfed only)</option>
-                        </select>
-                    </div>
-                    
-                    <button class="btn" onclick="getCropRecommendation()">Get AI Recommendation</button>
-                    
-                    <div id="aiRecommendation" style="margin-top: 2rem; padding: 1.5rem; background-color: #f1f8e9; border-radius: 10px; display: none;">
-                        <h4>AI Recommendation</h4>
+                    <button class="btn" onclick="getCropRecommendation()">Get Recommendation</button>
+                    <div id="recommendationResult" style="display: none; margin-top: 1rem; padding: 1rem; background: #f1f8e9;">
                         <p><strong>Recommended Crop:</strong> <span id="recommendedCrop">Rice</span></p>
-                        <p><strong>Reason:</strong> <span id="recommendationReason">Suitable for wetland with high water availability during monsoon</span></p>
-                        <p><strong>Expected Yield:</strong> 3-4 tons per acre</p>
-                        <p><strong>Market Price Forecast:</strong> ₹28-32 per kg</p>
+                        <p><strong>Reason:</strong> Suitable for current monsoon conditions</p>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Disaster Alerts Section -->
-            <div id="disasterAlertsSection" class="section">
-                <h2>Disaster Alerts & Management</h2>
-                
+            <div id="disaster" class="section">
+                <h2>Disaster Alerts</h2>
                 <div class="alert warning">
                     <i class="fas fa-exclamation-triangle"></i>
-                    <div><strong>Active Alert:</strong> Heavy rainfall warning for Alappuzha, Kottayam districts. Flood possibility in low-lying areas.</div>
+                    <div><strong>Active Alert:</strong> Heavy rainfall warning for Alappuzha and Kottayam districts</div>
                 </div>
-                
                 <div class="dashboard">
                     <div class="card">
                         <h3><i class="fas fa-bell"></i> Real-time Alerts</h3>
-                        <div style="margin-top: 1rem;">
-                            <p><strong>Location:</strong> Kuttanad Panchayat</p>
-                            <p><strong>Alert:</strong> Flood Warning Level 2</p>
-                            <p><strong>Time:</strong> 2 hours ago</p>
-                            <p><strong>Advice:</strong> Move equipment to higher ground</p>
-                        </div>
+                        <p><strong>Kuttanad Panchayat:</strong> Flood Warning Level 2</p>
+                        <p><strong>Advice:</strong> Move equipment to higher ground</p>
                     </div>
-                    
                     <div class="card">
                         <h3><i class="fas fa-history"></i> Disaster History</h3>
-                        <div class="form-group" style="margin-top: 1rem;">
+                        <div class="form-group">
                             <label>Select Location</label>
                             <select id="disasterLocation">
                                 <option>Alappuzha</option>
                                 <option>Kottayam</option>
                                 <option>Idukki</option>
-                                <option>Wayanad</option>
                             </select>
                         </div>
                         <button class="btn" onclick="showDisasterHistory()">View History</button>
-                        
-                        <div id="disasterHistory" style="margin-top: 1rem; padding: 1rem; background-color: #f9f9f9; border-radius: 10px; display: none;">
-                            <p><strong>2018 Floods:</strong> Severe damage to paddy fields</p>
-                            <p><strong>2019 Landslides:</strong> Affected coffee plantations</p>
-                            <p><strong>2020 Drought:</strong> Water scarcity for 3 months</p>
+                        <div id="historyResult" style="display: none; margin-top: 1rem;">
+                            <p>• 2018: Severe floods</p>
+                            <p>• 2019: Landslides</p>
                         </div>
                     </div>
-                    
                     <div class="card">
                         <h3><i class="fas fa-shield-alt"></i> Preventive Measures</h3>
-                        <p style="margin-top: 1rem;"><strong>For Flood-Prone Areas:</strong></p>
-                        <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
-                            <li>Construct drainage channels</li>
-                            <li>Raise seed beds</li>
-                            <li>Plant flood-resistant varieties</li>
-                        </ul>
-                        
-                        <p style="margin-top: 1rem;"><strong>For Drought-Prone Areas:</strong></p>
-                        <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
-                            <li>Drip irrigation systems</li>
-                            <li>Drought-resistant crops</li>
-                            <li>Rainwater harvesting</li>
-                        </ul>
+                        <p>• Construct drainage channels</p>
+                        <p>• Plant flood-resistant varieties</p>
+                        <p>• Keep emergency kit ready</p>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Community Section -->
-            <div id="communitySection" class="section">
+            <div id="community" class="section">
                 <h2>Community Dashboard</h2>
-                <p>Connect with other farmers, ask questions, share experiences, and get advice from agricultural officers.</p>
-                
                 <div class="card" style="margin-bottom: 2rem;">
-                    <h3>Create New Post</h3>
+                    <h3>Create Post</h3>
                     <div class="form-group">
                         <label>Post Type</label>
                         <select id="postType">
                             <option>Question</option>
                             <option>Crop Issue</option>
                             <option>Success Story</option>
-                            <option>Market Info</option>
                         </select>
                     </div>
-                    
                     <div class="form-group">
-                        <label>Visibility</label>
-                        <select id="postVisibility">
-                            <option>Public (All can see)</option>
-                            <option>Private (Officials only)</option>
-                        </select>
+                        <label>Message</label>
+                        <textarea id="postContent" rows="3"></textarea>
                     </div>
-                    
-                    <div class="form-group">
-                        <label>Your Message</label>
-                        <textarea id="postContent" rows="4" placeholder="Describe your issue or share information..."></textarea>
-                    </div>
-                    
                     <button class="btn" onclick="createPost()">Post to Community</button>
                 </div>
-                
-                <h3>Recent Community Posts</h3>
-                
+                <h3>Recent Posts</h3>
                 <div class="post">
                     <div class="post-header">
-                        <div class="post-author">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
                             <div class="badge farmer">Farmer</div>
-                            <div>
-                                <strong>Rajesh Kumar</strong>
-                                <div style="font-size: 0.9rem; color: var(--gray);">Alappuzha • 2 hours ago</div>
-                            </div>
+                            <div><strong>Rajesh Kumar</strong></div>
                         </div>
-                        <div class="badge">Crop Issue</div>
+                        <small>2 hours ago</small>
                     </div>
-                    
-                    <div class="post-content">
-                        <p>Yellow spots appearing on paddy leaves. Anyone facing similar issue? What treatment should I use?</p>
-                        <div style="margin-top: 0.5rem;">
-                            <span class="badge" style="background-color: #e8f5e9; color: var(--dark-green);">#Paddy #Disease</span>
-                        </div>
-                    </div>
-                    
-                    <div class="post-actions">
-                        <button class="action-btn"><i class="far fa-thumbs-up"></i> Helpful (3)</button>
-                        <button class="action-btn"><i class="far fa-comment"></i> Reply (2)</button>
-                    </div>
+                    <p>Yellow spots on paddy leaves. Any suggestions for treatment?</p>
                 </div>
-                
                 <div class="post">
                     <div class="post-header">
-                        <div class="post-author">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
                             <div class="badge official">Agri Officer</div>
-                            <div>
-                                <strong>Agricultural Department</strong>
-                                <div style="font-size: 0.9rem; color: var(--gray);">Official • 1 day ago</div>
-                            </div>
+                            <div><strong>Agriculture Department</strong></div>
                         </div>
+                        <small>1 day ago</small>
                     </div>
-                    
-                    <div class="post-content">
-                        <p><strong>Subsidy Announcement:</strong> 50% subsidy on drip irrigation systems for small farmers. Apply before 30th November.</p>
-                    </div>
+                    <p><strong>Announcement:</strong> 50% subsidy on drip irrigation systems. Apply before Nov 30.</p>
                 </div>
             </div>
-            
-            <!-- Business Platform Section -->
-            <div id="businessSection" class="section">
-                <h2>Business Platform</h2>
-                <p>Buy and sell agricultural products, fertilizers, and lease land for farming.</p>
-                
+
+            <!-- Marketplace Section -->
+            <div id="marketplace" class="section">
+                <h2>Marketplace</h2>
                 <div class="dashboard">
                     <div class="card">
                         <h3><i class="fas fa-shopping-basket"></i> Buy Products</h3>
-                        <div class="form-group" style="margin-top: 1rem;">
-                            <label>Product Category</label>
-                            <select id="productCategory">
-                                <option>Fruits</option>
-                                <option>Vegetables</option>
-                                <option>Grains</option>
-                                <option>Flowers</option>
-                                <option>Fertilizers</option>
-                                <option>Land Lease</option>
-                            </select>
-                        </div>
-                        
-                        <div id="productList" style="margin-top: 1rem;">
-                            <div style="padding: 1rem; border-bottom: 1px solid #eee;">
-                                <p><strong>Organic Rice</strong> - 100kg available</p>
-                                <p><small>Price: ₹28/kg • Farmer: Suresh, Kottayam</small></p>
-                                <button class="btn" style="padding: 0.5rem 1rem; font-size: 1rem; margin-top: 0.5rem;">Place Bid</button>
-                            </div>
-                            
-                            <div style="padding: 1rem; border-bottom: 1px solid #eee;">
-                                <p><strong>Coconut</strong> - 500 pieces available</p>
-                                <p><small>Price: ₹35/piece • Farmer: Anitha, Alappuzha</small></p>
-                                <button class="btn" style="padding: 0.5rem 1rem; font-size: 1rem; margin-top: 0.5rem;">Place Bid</button>
-                            </div>
+                        <select class="form-group" style="margin-top: 1rem;">
+                            <option>Fruits</option>
+                            <option>Vegetables</option>
+                            <option>Grains</option>
+                            <option>Fertilizers</option>
+                        </select>
+                        <div style="margin-top: 1rem;">
+                            <p><strong>Organic Rice</strong> - 100kg</p>
+                            <p>Price: ₹28/kg</p>
+                            <button class="btn" style="padding: 0.5rem;">Place Bid</button>
                         </div>
                     </div>
-                    
                     <div class="card">
                         <h3><i class="fas fa-store"></i> Sell Products</h3>
                         <div class="form-group" style="margin-top: 1rem;">
-                            <label>Sell as</label>
-                            <select id="sellType">
-                                <option>Farmer (Sell produce)</option>
-                                <option>Business (Sell fertilizers/equipment)</option>
-                                <option>Landowner (Lease land)</option>
-                            </select>
+                            <label>Product Name</label>
+                            <input type="text" placeholder="e.g., Organic Rice">
                         </div>
-                        
-                        <div id="sellForm">
-                            <div class="form-group">
-                                <label>Product Name</label>
-                                <input type="text" placeholder="e.g., Organic Rice, Urea Fertilizer">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label>Quantity</label>
-                                <input type="text" placeholder="e.g., 100kg, 5 acres">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label>Price</label>
-                                <input type="text" placeholder="₹ per unit">
-                            </div>
-                            
-                            <button class="btn">List for Sale</button>
+                        <div class="form-group">
+                            <label>Quantity</label>
+                            <input type="text" placeholder="e.g., 100kg">
                         </div>
-                    </div>
-                    
-                    <div class="card">
-                        <h3><i class="fas fa-chart-bar"></i> Market Trends</h3>
-                        <div style="margin-top: 1rem;">
-                            <p><strong>High Demand:</strong> Organic vegetables, Coconut</p>
-                            <p><strong>Stable Prices:</strong> Rice, Banana</p>
-                            <p><strong>Growing Market:</strong> Spices, Medicinal plants</p>
-                        </div>
-                        
-                        <div style="margin-top: 1.5rem;">
-                            <h4>Your Transactions</h4>
-                            <p><strong>Active Bids:</strong> 2</p>
-                            <p><strong>Completed:</strong> 5 transactions</p>
-                            <p><strong>Rating:</strong> 4.5/5 stars</p>
-                        </div>
+                        <button class="btn">List for Sale</button>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Emergency Section -->
-            <div id="emergencySection" class="section">
-                <h2>Emergency & Helplines</h2>
-                
+            <div id="emergency" class="section">
+                <h2>Emergency Services</h2>
                 <div class="alert warning">
                     <i class="fas fa-exclamation-circle"></i>
-                    <div>In case of agricultural emergency or natural disaster, use these contacts immediately.</div>
+                    <div>Use these contacts in case of agricultural emergency or natural disaster.</div>
                 </div>
-                
                 <div class="dashboard">
                     <div class="card">
                         <h3><i class="fas fa-phone-alt"></i> Emergency Contacts</h3>
-                        <div style="margin-top: 1rem;">
-                            <p><strong>Disaster Management:</strong> 1077</p>
-                            <p><strong>Agricultural Crisis:</strong> 0471-123456</p>
-                            <p><strong>Police:</strong> 100</p>
-                            <p><strong>Ambulance:</strong> 108</p>
-                            <p><strong>Fire & Rescue:</strong> 101</p>
-                        </div>
+                        <p><strong>Disaster Management:</strong> 1077</p>
+                        <p><strong>Agricultural Crisis:</strong> 0471-123456</p>
+                        <p><strong>Police:</strong> 100</p>
+                        <p><strong>Ambulance:</strong> 108</p>
                     </div>
-                    
                     <div class="card">
-                        <h3><i class="fas fa-map-marker-alt"></i> Share Location</h3>
-                        <p style="margin-top: 1rem;">In emergency, share your location with authorities:</p>
-                        <button class="btn" style="margin-top: 1rem;" onclick="shareLocation()">
-                            <i class="fas fa-location-arrow"></i> Share My Location
-                        </button>
-                        
-                        <div id="locationStatus" style="margin-top: 1rem; padding: 1.2rem; background-color: #f1f8e9; border-radius: 10px; display: none;">
-                            <p><strong>Location Shared!</strong></p>
-                            <p>Latitude: 9.4981, Longitude: 76.3388</p>
-                            <p>Nearest help center alerted.</p>
+                        <h3><i class="fas fa-location-arrow"></i> Share Location</h3>
+                        <button class="btn" onclick="shareLocation()">Share My Location</button>
+                        <div id="locationStatus" style="display: none; margin-top: 1rem; padding: 1rem; background: #e8f5e9;">
+                            <p>Location shared with emergency services.</p>
                         </div>
-                    </div>
-                    
-                    <div class="card">
-                        <h3><i class="fas fa-first-aid"></i> Emergency Guidelines</h3>
-                        <ul style="padding-left: 1.5rem; margin-top: 1rem;">
-                            <li>Move to higher ground during floods</li>
-                            <li>Secure livestock and equipment</li>
-                            <li>Keep important documents in waterproof bags</li>
-                            <li>Have emergency kit ready (first aid, torch, radio)</li>
-                            <li>Follow official evacuation orders</li>
-                        </ul>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Profile Section -->
-            <div id="profileSection" class="section">
-                <h2>User Profile</h2>
-                <p>Update your information every 6 months to keep data current.</p>
-                
-                <div class="card" style="max-width: 600px;">
-                    <h3>Personal Information</h3>
-                    
-                    <div class="form-group">
-                        <label>Full Name</label>
-                        <input type="text" id="profileName" value="John Farmer">
+            <div id="profile" class="section">
+                <h2>Profile Management</h2>
+                <div class="card">
+                    <h3>Update Your Information</h3>
+                    <div id="profileContent">
+                        <!-- Dynamic content based on user type -->
                     </div>
-                    
-                    <div class="form-group">
-                        <label>Contact Number</label>
-                        <input type="tel" id="profilePhone" value="9876543210">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Email Address</label>
-                        <input type="email" id="profileEmail" value="farmer@example.com">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>District</label>
-                        <select id="profileDistrict">
-                            <option>Alappuzha</option>
-                            <option>Kottayam</option>
-                            <option>Idukki</option>
-                            <option>Ernakulam</option>
-                            <option>Thrissur</option>
-                            <option>Palakkad</option>
-                            <option>Wayanad</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Panchayat</label>
-                        <input type="text" id="profilePanchayat" value="Kuttanad Panchayat">
-                    </div>
-                    
-                    <!-- Farmer-specific fields -->
-                    <div id="farmerProfileFields">
-                        <h4 style="margin-top: 1.5rem;">Land Details</h4>
-                        <div class="form-group">
-                            <label>Total Land Area (acres)</label>
-                            <input type="number" id="landArea" value="2.5">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Survey Number</label>
-                            <input type="text" id="surveyNo" value="123/456">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Current Crops</label>
-                            <input type="text" id="currentCrops" value="Rice, Coconut">
-                        </div>
-                    </div>
-                    
-                    <!-- Business-specific fields -->
-                    <div id="businessProfileFields" style="display: none;">
-                        <h4 style="margin-top: 1.5rem;">Business Details</h4>
-                        <div class="form-group">
-                            <label>Business Type</label>
-                            <select id="businessType">
-                                <option>Fertilizer Seller</option>
-                                <option>Produce Buyer</option>
-                                <option>Equipment Rental</option>
-                                <option>Land Leasing</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>License Number</label>
-                            <input type="text" id="licenseNo" value="KL08AB123456">
-                        </div>
-                    </div>
-                    
                     <button class="btn" onclick="updateProfile()">Update Profile</button>
-                    
-                    <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #eee;">
-                        <p><strong>Last Updated:</strong> <span id="profileLastUpdate">2023-10-15</span></p>
-                        <p><small style="color: var(--gray);">Next update due by: <span id="nextUpdateDue">2024-04-15</span></small></p>
+                    <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #ddd;">
+                        <p><strong>Last Updated:</strong> <span id="profileLastUpdate">Not yet updated</span></p>
+                        <p><strong>Next Update Due:</strong> <span id="nextUpdate">Within 6 months</span></p>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!-- Chatbot -->
         <div class="chatbot-container">
             <div class="chatbot-btn" onclick="toggleChatbot()">
                 <i class="fas fa-robot"></i>
             </div>
-            
             <div id="chatbotWindow" class="chatbot-window">
                 <div class="chatbot-header">
-                    <div>
-                        <h4>Krishi AI Assistant</h4>
-                        <p style="font-size: 0.9rem;">Voice & Photo support available</p>
-                    </div>
-                    <button onclick="toggleChatbot()" style="background: none; border: none; color: white; cursor: pointer;">
-                        <i class="fas fa-times"></i>
-                    </button>
+                    <h3 style="margin: 0;">Krishi AI Assistant</h3>
                 </div>
-                
                 <div class="chatbot-messages" id="chatbotMessages">
                     <div class="message bot">
-                        <p>Hello! I'm your Krishi AI Assistant. How can I help you today?</p>
-                        <p style="margin-top: 0.5rem; font-size: 0.9rem;">You can ask about crops, diseases, weather, or upload a photo of your crop issue.</p>
+                        Hello! I'm your agricultural assistant. How can I help you today?
                     </div>
                 </div>
-                
                 <div class="chatbot-input">
-                    <input type="text" id="chatInput" placeholder="Type your question...">
-                    <button onclick="sendChatMessage()"><i class="fas fa-paper-plane"></i></button>
+                    <input type="text" id="chatInput" placeholder="Type your question..." style="flex: 1;">
+                    <button onclick="sendChatMessage()" style="padding: 0.5rem 1rem; background: var(--primary-green); color: white; border: none; border-radius: 5px;">Send</button>
                 </div>
             </div>
         </div>
@@ -1599,40 +971,11 @@
         // Application State
         let currentUser = null;
         let currentUserType = null;
-        let currentSection = 'dashboard';
-        
-        // Demo data
-        const demoUsers = {
-            farmer: {
-                name: "Rajesh Kumar",
-                badge: "farmer",
-                district: "Alappuzha",
-                panchayat: "Kuttanad Panchayat",
-                landArea: "2.5 acres",
-                crops: ["Rice", "Coconut"]
-            },
-            business: {
-                name: "Green Agro Traders",
-                badge: "business",
-                type: "Produce Buyer",
-                license: "KL07CD789012"
-            },
-            citizen: {
-                name: "Anitha Nair",
-                badge: "citizen",
-                district: "Kottayam"
-            },
-            official: {
-                name: "Dr. Suresh Menon",
-                badge: "official",
-                role: "Agricultural Officer",
-                department: "Agriculture Department, Kerala"
-            }
-        };
-        
-        // Initialize the application
-        function initApp() {
-            // Check if user is already logged in (from localStorage)
+        let userData = {};
+
+        // Initialize
+        function init() {
+            // Check if user is already logged in
             const savedUser = localStorage.getItem('krishiMithramUser');
             if (savedUser) {
                 currentUser = JSON.parse(savedUser);
@@ -1641,378 +984,333 @@
             } else {
                 showWelcomeScreen();
             }
-            
-            // Set up event listeners
-            setupEventListeners();
         }
-        
+
         // Show welcome screen
         function showWelcomeScreen() {
             document.getElementById('welcomeScreen').style.display = 'flex';
             document.getElementById('loginScreen').style.display = 'none';
             document.getElementById('appContainer').style.display = 'none';
         }
-        
+
         // Show login screen
         function showLoginScreen() {
             document.getElementById('welcomeScreen').style.display = 'none';
             document.getElementById('loginScreen').style.display = 'flex';
-            document.getElementById('appContainer').style.display = 'none';
-            selectUserType('farmer'); // Default selection
+            selectUserType('farmer');
         }
-        
+
+        // Select user type
+        function selectUserType(type) {
+            // Update button styles
+            document.querySelectorAll('.user-type-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.closest('.user-type-btn').classList.add('active');
+
+            // Show appropriate form
+            document.querySelectorAll('.form-section').forEach(form => {
+                form.style.display = 'none';
+            });
+            document.getElementById(`${type}Form`).style.display = 'block';
+            
+            currentUserType = type;
+        }
+
+        // Farmer Registration
+        function registerFarmer() {
+            const farmerData = {
+                type: 'farmer',
+                name: document.getElementById('farmerName').value,
+                id: document.getElementById('farmerId').value,
+                phone: document.getElementById('farmerPhone').value,
+                district: document.getElementById('farmerDistrict').value,
+                panchayat: document.getElementById('farmerPanchayat').value,
+                surveyNumber: document.getElementById('surveyNumber').value,
+                landArea: document.getElementById('landArea').value,
+                crops: document.getElementById('currentCrops').value,
+                registrationDate: new Date().toISOString().split('T')[0]
+            };
+
+            if (!farmerData.name || !farmerData.id) {
+                alert('Please fill required fields');
+                return;
+            }
+
+            currentUser = farmerData;
+            localStorage.setItem('krishiMithramUser', JSON.stringify(farmerData));
+            showApp();
+        }
+
+        // Business Registration
+        function registerBusiness() {
+            const businessData = {
+                type: 'business',
+                name: document.getElementById('businessName').value,
+                license: document.getElementById('businessLicense').value,
+                businessType: document.getElementById('businessType').value,
+                purpose: document.getElementById('businessPurpose').value,
+                phone: document.getElementById('businessPhone').value,
+                email: document.getElementById('businessEmail').value,
+                registrationDate: new Date().toISOString().split('T')[0]
+            };
+
+            if (!businessData.name || !businessData.license) {
+                alert('Please fill required fields');
+                return;
+            }
+
+            currentUser = businessData;
+            localStorage.setItem('krishiMithramUser', JSON.stringify(businessData));
+            showApp();
+        }
+
+        // Citizen Registration
+        function registerCitizen() {
+            const citizenData = {
+                type: 'citizen',
+                name: document.getElementById('citizenName').value,
+                email: document.getElementById('citizenEmail').value,
+                phone: document.getElementById('citizenPhone').value,
+                district: document.getElementById('citizenDistrict').value,
+                interest: document.getElementById('citizenInterest').value,
+                registrationDate: new Date().toISOString().split('T')[0]
+            };
+
+            if (!citizenData.name || !citizenData.email) {
+                alert('Please fill required fields');
+                return;
+            }
+
+            currentUser = citizenData;
+            localStorage.setItem('krishiMithramUser', JSON.stringify(citizenData));
+            showApp();
+        }
+
+        // Official Registration
+        function registerOfficial() {
+            const officialData = {
+                type: 'official',
+                name: document.getElementById('officialName').value,
+                id: document.getElementById('officialId').value,
+                department: document.getElementById('officialDept').value,
+                designation: document.getElementById('officialDesignation').value,
+                district: document.getElementById('officialDistrict').value,
+                phone: document.getElementById('officialPhone').value,
+                registrationDate: new Date().toISOString().split('T')[0]
+            };
+
+            if (!officialData.name || !officialData.id) {
+                alert('Please fill required fields');
+                return;
+            }
+
+            currentUser = officialData;
+            localStorage.setItem('krishiMithramUser', JSON.stringify(officialData));
+            showApp();
+        }
+
         // Show main app
         function showApp() {
             document.getElementById('welcomeScreen').style.display = 'none';
             document.getElementById('loginScreen').style.display = 'none';
             document.getElementById('appContainer').style.display = 'block';
-            
-            // Update UI with user info
+
+            // Update UI
             document.getElementById('userName').textContent = currentUser.name;
-            document.getElementById('userBadge').textContent = currentUserType.charAt(0).toUpperCase() + currentUserType.slice(1);
-            document.getElementById('userBadge').className = `badge ${currentUserType}`;
-            
-            // Show appropriate sections based on user type
-            setupUserSpecificFeatures();
-            
-            // Show dashboard by default
-            showSection('dashboard');
-        }
-        
-        // Show feature info on welcome screen
-        function showFeatureInfo(feature) {
-            const featureInfo = {
-                panchayat: "Interactive maps showing soil types, water availability, and crop suitability for each panchayat",
-                crop: "AI-powered recommendations based on weather, soil conditions, and market demand",
-                market: "Platform for farmers to sell produce and businesses to buy/sell agricultural products",
-                disaster: "Real-time alerts for floods, landslides, and other natural disasters in Kerala",
-                community: "Connect with other farmers and agricultural experts for advice and support",
-                ai: "Voice-enabled chatbot that can diagnose crop issues from photos"
-            };
-            
-            alert(`Feature: ${featureInfo[feature]}`);
-        }
-        
-        // Change language on welcome screen
-        function changeLanguage(lang) {
-            // Remove active class from all language buttons
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            
-            // Add active class to clicked button
-            event.target.classList.add('active');
-            
-            // In a real app, this would change the language of the entire interface
-            alert(`Language changed to ${lang === 'en' ? 'English' : lang === 'ml' ? 'Malayalam' : 'Hindi'}`);
-        }
-        
-        // Select user type on login screen
-        function selectUserType(type) {
-            // Remove active class from all buttons
-            document.querySelectorAll('.user-type-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            
-            // Add active class to clicked button
-            event.target.closest('.user-type-btn').classList.add('active');
-            
-            // Hide all forms
-            document.querySelectorAll('.form-section').forEach(form => {
-                form.style.display = 'none';
-            });
-            
-            // Show selected form
-            document.getElementById(`${type}Form`).style.display = 'block';
-            
-            // Set current user type
-            currentUserType = type;
-        }
-        
-        // Login function
-        function login(type) {
-            // In a real app, this would validate with backend
-            // For prototype, we'll use demo data
-            
-            currentUser = demoUsers[type];
-            currentUser.type = type;
-            
-            // Save to localStorage
-            localStorage.setItem('krishiMithramUser', JSON.stringify(currentUser));
-            
-            // Show the app
-            showApp();
-            
-            // Show welcome message
-            setTimeout(() => {
-                alert(`Welcome to Krishi Mithram, ${currentUser.name}!`);
-            }, 500);
-        }
-        
-        // Logout function
-        function logout() {
-            if (confirm('Are you sure you want to logout?')) {
-                localStorage.removeItem('krishiMithramUser');
-                currentUser = null;
-                currentUserType = null;
-                showWelcomeScreen();
+            document.getElementById('userBadge').textContent = currentUser.type.charAt(0).toUpperCase() + currentUser.type.slice(1);
+            document.getElementById('userBadge').className = `badge ${currentUser.type}`;
+
+            // Show official features if applicable
+            if (currentUser.type === 'official') {
+                document.getElementById('officialEditSection').style.display = 'block';
             }
+
+            // Set last update date
+            const lastUpdate = new Date();
+            lastUpdate.setMonth(lastUpdate.getMonth() - 1);
+            document.getElementById('lastUpdate').textContent = lastUpdate.toISOString().split('T')[0];
+            document.getElementById('profileLastUpdate').textContent = lastUpdate.toISOString().split('T')[0];
+
+            // Calculate next update
+            const nextUpdate = new Date(lastUpdate);
+            nextUpdate.setMonth(nextUpdate.getMonth() + 6);
+            document.getElementById('nextUpdate').textContent = nextUpdate.toISOString().split('T')[0];
+
+            // Load profile data
+            loadProfileData();
         }
-        
-        // Show different sections
+
+        // Show section
         function showSection(sectionId) {
             // Hide all sections
             document.querySelectorAll('.section').forEach(section => {
                 section.style.display = 'none';
             });
-            
-            // Remove active class from all nav items
+
+            // Remove active class from nav
             document.querySelectorAll('.nav-item').forEach(item => {
                 item.classList.remove('active');
             });
-            
+
             // Show selected section
-            document.getElementById(`${sectionId}Section`).style.display = 'block';
-            
-            // Add active class to clicked nav item
+            document.getElementById(sectionId).style.display = 'block';
+
+            // Add active class to nav
             event.target.closest('.nav-item').classList.add('active');
-            
-            // Update current section
-            currentSection = sectionId;
         }
-        
-        // Show profile section
-        function showProfile() {
-            // Hide all sections
-            document.querySelectorAll('.section').forEach(section => {
-                section.style.display = 'none';
-            });
-            
-            // Remove active class from all nav items
-            document.querySelectorAll('.nav-item').forEach(item => {
-                item.classList.remove('active');
-            });
-            
-            // Show profile section
-            document.getElementById('profileSection').style.display = 'block';
-            
-            // Populate profile data
-            populateProfileData();
-        }
-        
-        // Populate profile data
-        function populateProfileData() {
-            if (!currentUser) return;
-            
-            // Set basic info
-            document.getElementById('profileName').value = currentUser.name;
-            document.getElementById('profileEmail').value = `${currentUserType}@example.com`;
-            document.getElementById('profilePhone').value = '9876543210';
-            
-            // Show/hide user-specific fields
-            if (currentUserType === 'farmer') {
-                document.getElementById('farmerProfileFields').style.display = 'block';
-                document.getElementById('businessProfileFields').style.display = 'none';
-                
-                // Set farmer-specific data
-                document.getElementById('landArea').value = currentUser.landArea || '2.5';
-                document.getElementById('currentCrops').value = Array.isArray(currentUser.crops) ? currentUser.crops.join(', ') : currentUser.crops || '';
-            } else if (currentUserType === 'business') {
-                document.getElementById('farmerProfileFields').style.display = 'none';
-                document.getElementById('businessProfileFields').style.display = 'block';
-                
-                // Set business-specific data
-                document.getElementById('businessType').value = currentUser.type || 'Produce Buyer';
-                document.getElementById('licenseNo').value = currentUser.license || '';
-            } else {
-                document.getElementById('farmerProfileFields').style.display = 'none';
-                document.getElementById('businessProfileFields').style.display = 'none';
-            }
-            
-            // Set last update date (demo)
-            const lastUpdate = new Date();
-            lastUpdate.setMonth(lastUpdate.getMonth() - 2); // 2 months ago
-            document.getElementById('profileLastUpdate').textContent = lastUpdate.toISOString().split('T')[0];
-            document.getElementById('lastUpdate').textContent = lastUpdate.toISOString().split('T')[0];
-            
-            // Set next update date (6 months from last update)
-            const nextUpdate = new Date(lastUpdate);
-            nextUpdate.setMonth(nextUpdate.getMonth() + 6);
-            document.getElementById('nextUpdateDue').textContent = nextUpdate.toISOString().split('T')[0];
-        }
-        
-        // Update profile
-        function updateProfile() {
-            // Get updated values
-            const updatedName = document.getElementById('profileName').value;
-            const updatedEmail = document.getElementById('profileEmail').value;
-            const updatedPhone = document.getElementById('profilePhone').value;
-            
-            // Update current user
-            currentUser.name = updatedName;
-            
-            // Update localStorage
-            localStorage.setItem('krishiMithramUser', JSON.stringify(currentUser));
-            
-            // Update UI
-            document.getElementById('userName').textContent = updatedName;
-            
-            // Show success message
-            alert('Profile updated successfully!');
-            
-            // Update last update date
-            const today = new Date();
-            document.getElementById('profileLastUpdate').textContent = today.toISOString().split('T')[0];
-            document.getElementById('lastUpdate').textContent = today.toISOString().split('T')[0];
-            
-            // Calculate next update date
-            const nextUpdate = new Date(today);
-            nextUpdate.setMonth(nextUpdate.getMonth() + 6);
-            document.getElementById('nextUpdateDue').textContent = nextUpdate.toISOString().split('T')[0];
-            
-            // Go back to dashboard
-            showSection('dashboard');
-        }
-        
-        // Setup user-specific features
-        function setupUserSpecificFeatures() {
-            if (currentUserType === 'official') {
-                // Show edit option in panchayat mapping for officials
-                document.getElementById('editPanchayatData').style.display = 'block';
-            }
-        }
-        
+
         // Load panchayat data
         function loadPanchayatData() {
-            const selectedPanchayat = document.getElementById('panchayatSelect').value;
+            const panchayat = document.getElementById('panchayatSelect').value;
             let data = {};
             
-            // Demo data for different panchayats
-            switch(selectedPanchayat) {
-                case 'alappuzha':
-                    data = {
-                        soil: "Alluvial soil",
-                        water: "High (Riverine area)",
-                        crops: "Rice, Coconut, Banana",
-                        fertility: "High",
-                        rainfall: "3000mm annually"
-                    };
-                    break;
+            switch(panchayat) {
                 case 'kuttanad':
-                    data = {
-                        soil: "Clayey soil",
-                        water: "Very High (Below sea level)",
-                        crops: "Rice, Fish farming",
-                        fertility: "Very High",
-                        rainfall: "3200mm annually"
-                    };
+                    data = { soil: "Alluvial", water: "High", crops: "Rice, Coconut", fertility: "High" };
                     break;
                 case 'wayanad':
-                    data = {
-                        soil: "Laterite soil",
-                        water: "Medium (Hilly region)",
-                        crops: "Coffee, Pepper, Tea",
-                        fertility: "Medium",
-                        rainfall: "2500mm annually"
-                    };
+                    data = { soil: "Laterite", water: "Medium", crops: "Coffee, Pepper", fertility: "Medium" };
                     break;
                 case 'palakkad':
-                    data = {
-                        soil: "Black soil",
-                        water: "Low (Dry region)",
-                        crops: "Sugarcane, Coconut, Mango",
-                        fertility: "Medium",
-                        rainfall: "2000mm annually"
-                    };
+                    data = { soil: "Black", water: "Low", crops: "Sugarcane, Mango", fertility: "Medium" };
                     break;
             }
-            
-            // Update UI
+
             document.getElementById('panchayatData').innerHTML = `
                 <p><strong>Soil Type:</strong> ${data.soil}</p>
                 <p><strong>Water Availability:</strong> ${data.water}</p>
-                <p><strong>Primary Crops:</strong> ${data.crops}</p>
+                <p><strong>Suitable Crops:</strong> ${data.crops}</p>
                 <p><strong>Fertility Level:</strong> ${data.fertility}</p>
-                <p><strong>Rainfall Pattern:</strong> ${data.rainfall}</p>
             `;
         }
-        
-        // Get crop recommendation from AI
+
+        // Get crop recommendation
         function getCropRecommendation() {
             const landType = document.getElementById('landType').value;
-            const soilType = document.getElementById('soilTypeSelect').value;
-            const waterAvail = document.getElementById('waterAvail').value;
+            let crop = "Rice";
+            if (landType === "Dryland") crop = "Millets";
+            if (landType === "Garden Land") crop = "Vegetables";
             
-            // Simple logic for demo
-            let recommendedCrop = "Rice";
-            let reason = "Suitable for current conditions";
-            
-            if (landType === "Wetland" && waterAvail === "High (River/Canal)") {
-                recommendedCrop = "Rice";
-                reason = "Ideal for wetland with high water availability";
-            } else if (landType === "Dryland" && waterAvail === "Low (Rainfed only)") {
-                recommendedCrop = "Millets";
-                reason = "Drought-resistant crops suitable for dryland farming";
-            } else if (landType === "Garden Land") {
-                recommendedCrop = "Vegetables";
-                reason = "Garden land with medium water availability perfect for vegetables";
-            } else if (landType === "Hilly Area") {
-                recommendedCrop = "Coffee/Pepper";
-                reason = "Hilly terrain suitable for plantation crops";
-            }
-            
-            // Update UI
-            document.getElementById('recommendedCrop').textContent = recommendedCrop;
-            document.getElementById('recommendationReason').textContent = reason;
-            document.getElementById('aiRecommendation').style.display = 'block';
-            
-            // Scroll to recommendation
-            document.getElementById('aiRecommendation').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('recommendedCrop').textContent = crop;
+            document.getElementById('recommendationResult').style.display = 'block';
         }
-        
+
         // Show disaster history
         function showDisasterHistory() {
-            document.getElementById('disasterHistory').style.display = 'block';
+            document.getElementById('historyResult').style.display = 'block';
         }
-        
-        // Create community post
+
+        // Create post
         function createPost() {
-            const postType = document.getElementById('postType').value;
-            const visibility = document.getElementById('postVisibility').value;
             const content = document.getElementById('postContent').value;
-            
-            if (!content.trim()) {
-                alert('Please enter post content');
-                return;
+            if (content) {
+                alert('Post created successfully!');
+                document.getElementById('postContent').value = '';
             }
-            
-            alert(`Post created successfully! ${visibility === 'Private (Officials only)' ? 'Sent to officials.' : 'Posted to community.'}`);
-            document.getElementById('postContent').value = '';
         }
-        
-        // Share location in emergency
+
+        // Share location
         function shareLocation() {
             document.getElementById('locationStatus').style.display = 'block';
-            
-            // Simulate API call
             setTimeout(() => {
-                alert('Location shared with emergency services. Help is on the way.');
-            }, 1000);
+                alert('Location shared with emergency services');
+            }, 500);
         }
-        
+
+        // Load profile data
+        function loadProfileData() {
+            let html = '';
+            
+            if (currentUser.type === 'farmer') {
+                html = `
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" value="${currentUser.name}">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" value="${currentUser.phone}">
+                    </div>
+                    <div class="form-group">
+                        <label>District</label>
+                        <input type="text" value="${currentUser.district}">
+                    </div>
+                    <div class="form-group">
+                        <label>Land Area (acres)</label>
+                        <input type="number" value="${currentUser.landArea}">
+                    </div>
+                `;
+            } else if (currentUser.type === 'business') {
+                html = `
+                    <div class="form-group">
+                        <label>Business Name</label>
+                        <input type="text" value="${currentUser.name}">
+                    </div>
+                    <div class="form-group">
+                        <label>License Number</label>
+                        <input type="text" value="${currentUser.license}">
+                    </div>
+                    <div class="form-group">
+                        <label>Business Type</label>
+                        <input type="text" value="${currentUser.businessType}">
+                    </div>
+                `;
+            } else if (currentUser.type === 'official') {
+                html = `
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" value="${currentUser.name}">
+                    </div>
+                    <div class="form-group">
+                        <label>Designation</label>
+                        <input type="text" value="${currentUser.designation}">
+                    </div>
+                    <div class="form-group">
+                        <label>Department</label>
+                        <input type="text" value="${currentUser.department}">
+                    </div>
+                `;
+            } else {
+                html = `
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" value="${currentUser.name}">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" value="${currentUser.email}">
+                    </div>
+                `;
+            }
+
+            document.getElementById('profileContent').innerHTML = html;
+        }
+
+        // Update profile
+        function updateProfile() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('profileLastUpdate').textContent = today;
+            document.getElementById('lastUpdate').textContent = today;
+            
+            const nextUpdate = new Date();
+            nextUpdate.setMonth(nextUpdate.getMonth() + 6);
+            document.getElementById('nextUpdate').textContent = nextUpdate.toISOString().split('T')[0];
+            
+            alert('Profile updated successfully!');
+        }
+
+        // Update panchayat data
+        function updatePanchayatData() {
+            alert('Panchayat data updated!');
+        }
+
         // Chatbot functions
         function toggleChatbot() {
             const chatbot = document.getElementById('chatbotWindow');
             chatbot.style.display = chatbot.style.display === 'flex' ? 'none' : 'flex';
-            
-            // Focus on input when opening
-            if (chatbot.style.display === 'flex') {
-                setTimeout(() => {
-                    document.getElementById('chatInput').focus();
-                }, 100);
-            }
         }
-        
+
         function sendChatMessage() {
             const input = document.getElementById('chatInput');
             const message = input.value.trim();
@@ -2020,80 +1318,46 @@
             if (!message) return;
             
             // Add user message
-            addChatMessage(message, 'user');
+            const messagesDiv = document.getElementById('chatbotMessages');
+            const userMsg = document.createElement('div');
+            userMsg.className = 'message user';
+            userMsg.textContent = message;
+            messagesDiv.appendChild(userMsg);
             
             // Clear input
             input.value = '';
             
-            // Simulate AI response after delay
+            // Get AI response
             setTimeout(() => {
-                const aiResponse = getAIResponse(message);
-                addChatMessage(aiResponse, 'bot');
+                const responses = [
+                    "For paddy cultivation, ensure proper water drainage during heavy rains.",
+                    "Use organic fertilizers for better soil health.",
+                    "Check market prices before selling your produce.",
+                    "Contact your agricultural officer for subsidy information.",
+                    "Plant flood-resistant varieties in low-lying areas."
+                ];
+                const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                
+                const botMsg = document.createElement('div');
+                botMsg.className = 'message bot';
+                botMsg.textContent = randomResponse;
+                messagesDiv.appendChild(botMsg);
+                
+                // Scroll to bottom
+                messagesDiv.scrollTop = messagesDiv.scrollHeight;
             }, 1000);
         }
-        
-        function addChatMessage(text, sender) {
-            const messagesDiv = document.getElementById('chatbotMessages');
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `message ${sender}`;
-            messageDiv.innerHTML = `<p>${text}</p>`;
-            messagesDiv.appendChild(messageDiv);
-            
-            // Scroll to bottom
-            messagesDiv.scrollTop = messagesDiv.scrollHeight;
-        }
-        
-        function getAIResponse(message) {
-            const lowerMessage = message.toLowerCase();
-            
-            if (lowerMessage.includes('paddy') || lowerMessage.includes('rice')) {
-                return "For paddy cultivation, ensure proper water management. During monsoon, use resistant varieties like Jyothi or Uma. For disease control, use Tricyclazole for blast disease.";
-            } else if (lowerMessage.includes('weather') || lowerMessage.includes('rain')) {
-                return "Current monsoon season brings heavy rainfall. Expect 250-300mm this week. Suitable for rice transplantation. Keep drainage channels clear.";
-            } else if (lowerMessage.includes('disease') || lowerMessage.includes('yellow')) {
-                return "Yellow spots on leaves could indicate bacterial leaf blight. Apply Copper Oxychloride 0.3% solution. Remove infected plants to prevent spread.";
-            } else if (lowerMessage.includes('price') || lowerMessage.includes('market')) {
-                return "Current market rates: Rice ₹28-32/kg, Coconut ₹30-36/piece, Banana ₹20-25/kg. Prices expected to rise by 5-10% next month.";
-            } else if (lowerMessage.includes('subsidy') || lowerMessage.includes('government')) {
-                return "Government subsidies available: 50% on drip irrigation, 40% on polyhouses, 30% on organic fertilizers. Contact your agricultural officer for application.";
-            } else if (lowerMessage.includes('hello') || lowerMessage.includes('hi')) {
-                return "Hello! I'm Krishi Mithram AI Assistant. How can I help you with your agricultural queries today?";
-            } else {
-                return "Thank you for your question. For specific crop advice, please provide more details or upload a photo of the affected plant.";
+
+        // Logout
+        function logout() {
+            if (confirm('Are you sure you want to logout?')) {
+                localStorage.removeItem('krishiMithramUser');
+                showWelcomeScreen();
             }
         }
-        
-        // Open chatbot from dashboard
-        function openChatbot() {
-            toggleChatbot();
-        }
-        
-        // Setup event listeners
-        function setupEventListeners() {
-            // Enter key in chatbot
-            document.getElementById('chatInput').addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    sendChatMessage();
-                }
-            });
-            
-            // Demo data initialization
-            if (!localStorage.getItem('panchayatData')) {
-                const demoPanchayatData = {
-                    alappuzha: {
-                        soil: "Alluvial soil",
-                        water: "High",
-                        crops: "Rice, Coconut, Banana",
-                        fertility: "High",
-                        rainfall: "3000mm"
-                    }
-                };
-                localStorage.setItem('panchayatData', JSON.stringify(demoPanchayatData));
-            }
-        }
-        
-        // Initialize app when page loads
-        window.onload = initApp;
+
+        // Initialize on load
+        window.onload = init;
     </script>
 </body>
 </html>
